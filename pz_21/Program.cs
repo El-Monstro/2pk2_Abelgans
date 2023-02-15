@@ -10,6 +10,7 @@ namespace pz_21
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Изучаем английский");
         }
     }
 }
