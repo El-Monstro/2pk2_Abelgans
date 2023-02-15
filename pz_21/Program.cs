@@ -10,7 +10,8 @@ namespace pz_21
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Изучаем английский");
+            Computer L2301A = new Computer(231123, 256, 3); 
+            L2301A.GetCompName();
         }
     }
 }
