@@ -24,5 +24,19 @@ namespace calc_pz25
         {
             InitializeComponent();
         }
+
+        private void press0Button_Click(object sender, RoutedEventArgs e)
+        {
+            inputTextBlock.Text += "0";
+        }
+        private void resultButtmon_Click(object sender, RoutedEventArgs e)
+        {
+            string expression = inputTextBlock.Text;
+            inputTextBlock.Text = Calculation(expression).ToString();
+        }
+        private double Calculation(string expression)
+        {
+            string pattern = @"(\d+)(\D)(\d+)";
+        }
     }
 }

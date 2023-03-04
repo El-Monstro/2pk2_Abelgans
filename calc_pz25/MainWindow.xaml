@@ -23,13 +23,14 @@
         </Grid.ColumnDefinitions>
 
         <Button x:Name="press0Button" Grid.Row="4" Grid.Column="0"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/thero.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+             Click="press0Button_Click">0</Button>
+
 
         <Button x:Name="press1Button" Grid.Row="3" Grid.Column="0"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
             <Image Source="page/first.png"></Image>
         </Button>
 
@@ -112,9 +113,10 @@
         </Button>
 
         <TextBlock x:Name="inputTextBlock" Grid.Column="0" Grid.Row="0"
-                   Grid.ColumnSpan="3" FontSize="30" TextAlignment="Right">
+                   Grid.ColumnSpan="4" FontSize="30" TextAlignment="Right">
         </TextBlock>
         
+
         
 
 
