@@ -29,88 +29,78 @@
 
 
         <Button x:Name="press1Button" Grid.Row="3" Grid.Column="0"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press1Button_Click">1</Button>
 
-            <Image Source="page/first.png"></Image>
-        </Button>
 
         <Button x:Name="press2Button" Grid.Row="3" Grid.Column="1"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/two.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press2Button_Click">2</Button>
 
         <Button x:Name="press3Button" Grid.Row="3" Grid.Column="2"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/third.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press3Button_Click">3</Button>
+
 
         <Button x:Name="press4Button" Grid.Row="2" Grid.Column="0"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/for.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press4Button_Click">4</Button>
 
         <Button x:Name="press5Button" Grid.Row="2" Grid.Column="1"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/five.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press5Button_Click">5</Button>
 
         <Button x:Name="press6Button" Grid.Row="2" Grid.Column="2"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/sixth.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press6Button_Click">6</Button>
 
         <Button x:Name="press7Button" Grid.Row="1" Grid.Column="0"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/seventh.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press7Button_Click">7</Button>
 
         <Button x:Name="press8Button" Grid.Row="1" Grid.Column="1"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/eight.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press8Button_Click">8</Button>
+
 
         <Button x:Name="press9Button" Grid.Row="1" Grid.Column="2"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/nine.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="18"
+            Click="press9Button_Click">9</Button>
+
 
         <Button x:Name="pressEquallyButton" Grid.Row="4" Grid.Column="1"
-                Grid.ColumnSpan="2">
-            <Image Source="page/ravn.png">
-            </Image>
-        </Button>
+                Grid.ColumnSpan="2" 
+                FontSize="22"
+            Click="pressEquallyButton_Click">=</Button>
 
         <Button x:Name="pressslashButton" Grid.Row="4" Grid.Column="3"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/slash.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="22"
+            Click="pressslashButton_Click">/</Button>
 
         <Button x:Name="pressMultiplyButton" Grid.Row="3" Grid.Column="3"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/multi.png" Height="53" Width="46">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="22"
+            Click="pressMultiplyButton_Click">*</Button>
 
         <Button x:Name="pressMinusButton" Grid.Row="2" Grid.Column="3"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/mini.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="22"
+            Click="pressMinusButton_Click">-</Button>
 
         <Button x:Name="pressPlusButton" Grid.Row="1" Grid.Column="3"
-                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Source="page/plus.png">
-            </Image>
-        </Button>
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                FontSize="22"
+            Click="pressPlusButton_Click">+</Button>
 
         <TextBlock x:Name="inputTextBlock" Grid.Column="0" Grid.Row="0"
                    Grid.ColumnSpan="4" FontSize="30" TextAlignment="Right">
