@@ -36,7 +36,7 @@ namespace calc_pz25
         }
         private double Calculation(string expression)
         {
-            string pattern = @"(\d+)(\D)(\d+)";
+            string pattern = @"(\d+)(\D)(\d+)"
         }
     }
 }
