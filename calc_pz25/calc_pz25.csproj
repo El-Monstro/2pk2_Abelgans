@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="page\eight.png" />
+    <None Remove="page\first.png" />
+    <None Remove="page\five.png" />
+    <None Remove="page\for.png" />
+    <None Remove="page\mini.png" />
+    <None Remove="page\multi.png" />
+    <None Remove="page\nine.png" />
+    <None Remove="page\plus.png" />
+    <None Remove="page\ravn.png" />
+    <None Remove="page\seventh.png" />
+    <None Remove="page\sixth.png" />
+    <None Remove="page\slash.png" />
+    <None Remove="page\thero.png" />
+    <None Remove="page\third.png" />
+    <None Remove="page\two.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="page\for.png" />
+    <Resource Include="page\mini.png" />
+    <Resource Include="page\multi.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="page\eight.png" />
+    <Resource Include="page\ravn.png" />
+    <Resource Include="page\seventh.png" />
+    <Resource Include="page\thero.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="page\first.png" />
+    <Resource Include="page\five.png" />
+    <Resource Include="page\nine.png" />
+    <Resource Include="page\plus.png" />
+    <Resource Include="page\sixth.png" />
+    <Resource Include="page\slash.png" />
+    <Resource Include="page\third.png" />
+    <Resource Include="page\two.png" />
+  </ItemGroup>
+
+</Project>
