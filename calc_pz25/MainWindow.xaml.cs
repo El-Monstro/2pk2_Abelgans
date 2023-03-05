@@ -84,48 +84,49 @@ namespace calc_pz25
         }
 
         private double Calculation(string expression)
-        {
-
-            string[] parts = expression.Split(' ');
-
-            double operand1;
-            double operand2;
-            double result = 0;
-
-            if (double.TryParse(parts[0], out operand1) && double.TryParse(parts[2], out operand2))
+        {            
             {
-                switch (parts[1])
+                // Создаем регулярное выражение
+                Regex regex = new Regex(@"(\d+(\.\d+)?)\s*([-+*/])\s*(\d+(\.\d+)?)");
+
+                // Ищем совпадения
+                Match match = regex.Match(expression);
+
+                if (match.Success)
                 {
-                    case "+":
-                        result = operand1 + operand2;
-                        break;
-                    case "-":
-                        result = operand1 - operand2;
-                        break;
-                    case "*":
-                        result = operand1 * operand2;
-                        break;
-                    case "/":
-                        if (operand2 != 0)
-                        {
-                            result = operand1 / operand2;
-                        }
-                        else
-                        {
-                            // обработка ошибки деления на ноль
-                        }
-                        break;
-                    default:
-                        // обработка ошибки некорректного оператора
-                        break;
+                    // Извлекаем операнды и оператор из найденного совпадения
+                    double operand1 = double.Parse(match.Groups[1].Value);
+                    double operand2 = double.Parse(match.Groups[4].Value);
+                    char op = match.Groups[3].Value[0];
+
+                    // Вычисляем результат в зависимости от оператора
+                    switch (op)
+                    {
+                        case '+':
+                            return operand1 + operand2;
+                        case '-':
+                            return operand1 - operand2;
+                        case '*':
+                            return operand1 * operand2;
+                        case '/':
+                            if (operand2 != 0)
+                            {
+                                return operand1 / operand2;
+                            }
+                            else
+                            {
+                                throw new DivideByZeroException("Деление на ноль!");
+                            }
+                        default:
+                            throw new ArgumentException("Неверный оператор: " + op);
+                    }
+                }
+                else
+                {
+                    throw new ArgumentException("Неверный формат выражения: " + expression);
                 }
             }
-            else
-            {
-                // обработка ошибки некорректных операндов
-            }
 
-            return result;
 
 
 
