@@ -7,14 +7,65 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <StackPanel             DockPanel.Dock="Top">            <Menu MinHeight="20">                <MenuItem Header="Файл">                    <MenuItem Header="Новый проект"></MenuItem>                    <MenuItem Header="Открыть"></MenuItem>                    <MenuItem Header="Сохранить"></MenuItem>                    <MenuItem Header="Удалить"></MenuItem>                </MenuItem>                <MenuItem Header="О программе"></MenuItem>            </Menu>            <WrapPanel MinHeight="20" Height="26">                <Button x:Name="pressItalic"                        ToolTip="Курсив">                    <Image Source="icons/italic.png" Width="23"> 
+        <StackPanel 
+            DockPanel.Dock="Top">
+            <Menu MinHeight="20">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Новый проект"></MenuItem>
+                    <MenuItem Header="Открыть"></MenuItem>
+                    <MenuItem Header="Сохранить"></MenuItem>
+                    <MenuItem Header="Удалить"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="О программе"></MenuItem>
+            </Menu>
+            <WrapPanel MinHeight="20" Height="26">
+                <Button x:Name="pressItalic"
+                        ToolTip="Курсив"
+                        Click="Button_Click">
+                    <Image Source="icons/italic.png" Width="23" RenderTransformOrigin="0.522,0.5">
                     </Image>
                     
-                </Button>                <Button x:Name="pressBold"                        ToolTip="Полужирный">                    <Image Source="icons/bold.png" Width="20">
+                </Button>
+
+                <Button x:Name="pressBold"
+                        ToolTip="Полужирный"
+                        Click="Button_Click">
+                    <Image Source="icons/bold.png" Width="20">
                     </Image>
-                </Button>                <Button x:Name="pressUndreLine"                        ToolTip="Подчеркивание">                    <Image Source="icons/underLine.png" Width="23">
+                </Button>
+
+                <Button x:Name="pressUndreLine"
+                        ToolTip="Подчеркивание">
+                    <Image Source="icons/underLine.png" Width="23">
                     </Image>
-                </Button>                                            </WrapPanel>        </StackPanel>        <StatusBar MinHeight="20" DockPanel.Dock="Bottom">        </StatusBar>        <ListBox MinHeight="200" DockPanel.Dock="Left" Width="216"></ListBox>        <RichTextBox            AcceptsReturn="True"            AcceptsTab="True"            SpellCheck.IsEnabled="True"            Language="ru-ru">        </RichTextBox>                            
+                </Button>
+
+                <Button x:Name="acceptButton" Content="ОК" IsDefault="True"
+Click="acceptButton_Click">
+                </Button>
+                <Button x:Name="escButton" Content="Выход" IsCancel="True"
+Click="escButton_Click"></Button>
+
+
+                
+
+            </WrapPanel>
+        </StackPanel>
+
+        <StatusBar MinHeight="20" DockPanel.Dock="Bottom">
+
+        </StatusBar>
+        <ListBox MinHeight="200" DockPanel.Dock="Left" Width="216"></ListBox>
+        <RichTextBox x:Name="BAN"
+            AcceptsReturn="True"
+            AcceptsTab="True"
+            SpellCheck.IsEnabled="True"
+            Language="ru-ru">
+        </RichTextBox>
+        
+        
+            
+
 
 
     </DockPanel>
