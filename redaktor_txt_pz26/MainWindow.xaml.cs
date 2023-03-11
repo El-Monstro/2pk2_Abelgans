@@ -1,18 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
+﻿using System.Windows;
 namespace redaktor_txt_pz26
 {
     /// <summary>
@@ -20,6 +6,8 @@ namespace redaktor_txt_pz26
     /// </summary>
     public partial class MainWindow : Window
     {
+        string filename = string.Empty;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,16 +25,13 @@ namespace redaktor_txt_pz26
 
         private void pressBold_Click(object sender, RoutedEventArgs e)
         {
-            if (BAN.Selection.Text.Length > 0)
+            if (BAN.FontWeight == FontWeights.Bold)
             {
-                if (BAN.Selection.GetPropertyValue(TextElement.FontWeightProperty).Equals(FontWeights.Bold))
-                {
-                    BAN.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
-                }
-                else
-                {
-                    BAN.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
-                }
+                BAN.FontWeight = FontWeights.Normal;
+            }
+            else
+            {
+                BAN.FontWeight = FontWeights.Bold;
             }
         }
 
@@ -54,6 +39,30 @@ namespace redaktor_txt_pz26
         {
 
 
+        }
+
+        private void newFileMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            CreateFileWindow createFileWindow = new CreateFileWindow();
+            if (createFileWindow.ShowDialog() == true)
+                filename = createFileWindow.FileName;
+            
+                
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void pressItalic_Click(object sender, RoutedEventArgs e)
+        {
+            BAN.FontStyle = FontStyles.Italic;
+        }
+
+        private void pressUndreLine_Click(object sender, RoutedEventArgs e)
+        {
+            BAN.TextDecorations = TextDecorations.Underline;
         }
     }
 }

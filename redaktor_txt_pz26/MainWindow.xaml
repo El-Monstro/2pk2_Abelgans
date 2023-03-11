@@ -11,8 +11,9 @@
             DockPanel.Dock="Top">
             <Menu MinHeight="20">
                 <MenuItem Header="Файл">
-                    <MenuItem Header="Новый проект"></MenuItem>
-                    <MenuItem Header="Открыть"></MenuItem>
+                    <MenuItem x:Name="newFileMenuItem" Header="Новый файл"
+                              Click="newFileMenuItem_Click"></MenuItem>
+                    <MenuItem x:Name="openFileMenuItem" Header="Открыть файл"></MenuItem>
                     <MenuItem Header="Сохранить"></MenuItem>
                     <MenuItem Header="Удалить"></MenuItem>
                 </MenuItem>
@@ -21,7 +22,7 @@
             <WrapPanel MinHeight="20" Height="26">
                 <Button x:Name="pressItalic"
                         ToolTip="Курсив"
-                        Click="Button_Click">
+                        Click="pressItalic_Click">
                     <Image Source="icons/italic.png" Width="23" RenderTransformOrigin="0.522,0.5">
                     </Image>
                     
@@ -29,14 +30,14 @@
 
                 <Button x:Name="pressBold"
                         ToolTip="Полужирный"
-                        Click="Button_Click">
+                        Click="pressBold_Click">
                     <Image Source="icons/bold.png" Width="20">
                     </Image>
                 </Button>
 
                 <Button x:Name="pressUndreLine"
                         ToolTip="Подчеркивание">
-                    <Image Source="icons/underLine.png" Width="23">
+                    <Image Source="icons/underLine.png" Width="23" RenderTransformOrigin="0.522,0.5">
                     </Image>
                 </Button>
 
@@ -55,7 +56,15 @@ Click="escButton_Click"></Button>
         <StatusBar MinHeight="20" DockPanel.Dock="Bottom">
 
         </StatusBar>
-        <ListBox MinHeight="200" DockPanel.Dock="Left" Width="216"></ListBox>
+        <ListBox x:Name="phoneList" Width="200">
+            <TextBlock FontWeight="Bold" TextDecorations="Underline" Text="Новинки" />
+            <ListBoxItem Background="LightGray">LG Nexus 5X</ListBoxItem>
+            <ListBoxItem>Huawei Nexus 6P</ListBoxItem>
+            <ListBoxItem Background="LightGray">iPhone 6S</ListBoxItem>
+            <ListBoxItem>iPhone 6S Plus</ListBoxItem>
+            <ListBoxItem Background="LightGray">Аsus Zenphone 2</ListBoxItem>
+            <ListBoxItem>Microsoft Lumia 950></ListBoxItem>
+        </ListBox>
         <RichTextBox x:Name="BAN"
             AcceptsReturn="True"
             AcceptsTab="True"
