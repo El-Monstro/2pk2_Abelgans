@@ -6,6 +6,8 @@ namespace redaktor_txt_pz26
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         string filename = string.Empty;
 
         public MainWindow()
@@ -64,5 +66,14 @@ namespace redaktor_txt_pz26
         {
             BAN.TextDecorations = TextDecorations.Underline;
         }
+
+        private void UpdateCursorPosition()
+        {
+            int row = BAN.GetLineIndexFromCharacterIndex(BAN.CaretIndex);
+            int col = BAN.CaretIndex - BAN.GetLineIndexFromCharacterIndex(row);
+            BAN.Text = $"строка: {row + 1} столбец: {col + 1}";
+        }
+
+
     }
 }

@@ -65,12 +65,12 @@ Click="escButton_Click"></Button>
             <ListBoxItem Background="LightGray">Аsus Zenphone 2</ListBoxItem>
             <ListBoxItem>Microsoft Lumia 950></ListBoxItem>
         </ListBox>
-        <RichTextBox x:Name="BAN"
+        <TextBox x:Name="BAN"
             AcceptsReturn="True"
             AcceptsTab="True"
             SpellCheck.IsEnabled="True"
-            Language="ru-ru">
-        </RichTextBox>
+            Language="ru-ru" TextChanged="BAN_TextChanged">
+        </TextBox>
         
         
             
