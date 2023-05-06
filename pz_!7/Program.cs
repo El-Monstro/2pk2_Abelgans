@@ -31,6 +31,7 @@ namespace pz__7
             {
                 Console.Write("{0} ", a);
             }
+            //
 
             Console.ReadKey();
         }
