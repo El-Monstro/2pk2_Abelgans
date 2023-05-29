@@ -12,8 +12,8 @@ namespace pz_28
         static void Main(string[] args)
         {
             Counter counter = new Counter();
-            Wait wait200 = new Wait(200, "Value 200 has been reached!");
-            Wait wait800 = new Wait(800, "Value 800 has been reached!");
+            Wait wait200 = new Wait(200, "Достигнуто значение 200");
+            Wait wait800 = new Wait(800, "Достигнуто значение 200");
 
             counter.OnValueChanged += wait200.CheckValue;
             counter.OnValueChanged += wait800.CheckValue;
@@ -32,7 +32,7 @@ namespace pz_28
         {
             for (int i = 1; i <= 1000; i++)
             {
-                Console.WriteLine($"Counter: {i}");
+                Console.WriteLine($"Счетчик: {i}");
                 OnValueChanged?.Invoke(i);
                 Thread.Sleep(100); // для задержки в 100 миллисекунд
             }
