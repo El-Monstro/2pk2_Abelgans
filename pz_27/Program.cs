@@ -22,14 +22,14 @@ namespace pz_27
 
             for (int i = 0; i < STUD1.Length; i++)
             {
-                Console.WriteLine("Введите фамилию и инициалы студента №" + (i + 1));
+                Console.WriteLine("Введите фамилию и инициалы студента" + (i + 1));
                 STUD1[i].NAME = Console.ReadLine();
 
-                Console.WriteLine("Введите номер группы для студента №" + (i + 1));
+                Console.WriteLine("Введите номер группы для студента" + (i + 1));
                 STUD1[i].GROUP = int.Parse(Console.ReadLine());
 
                 STUD1[i].SES = new int[5];
-                Console.WriteLine("Введите пять оценок для студента №" + (i + 1));
+                Console.WriteLine("Введите пять оценок для студента" + (i + 1));
                 for (int j = 0; j < STUD1[i].SES.Length; j++)
                 {
                     STUD1[i].SES[j] = int.Parse(Console.ReadLine());
